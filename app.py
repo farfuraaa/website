@@ -64,14 +64,17 @@ with st.container():
     # image_column, text_column = st.columns((1, 2))
     # with image_column:
     #     st.image(img_lottie_animation)
-    img = Image.open("img1.jpg")
-    st.image(img)
-    img = Image.open("img2.jpg")
-    st.image(img)
-    img = Image.open("img3.jpg")
-    st.image(img)
-    img = Image.open("img4.jpg")
-    st.image(img)
+    st.video("https://youtu.be/Rc8Ot_JZP0U")
+    # img = Image.open("img1.jpg")
+    # st.image(img)
+    # img = Image.open("img2.jpg")
+    # st.image(img)
+    st.video("https://youtu.be/yd47jjJwuYY")
+    # img = Image.open("img3.jpg")
+    # st.image(img)
+    # img = Image.open("img4.jpg")
+    # st.image(img)
+
 #     with text_column:
 #         st.subheader("Integrate Lottie Animations Inside Your Streamlit App")
 #         st.write(
@@ -102,7 +105,7 @@ with st.container():
     st.header("Get In Touch With Me")
     st.write("##")
     st.write(" my email: farfuraaa@gmail.com")
-    st.sidebar.markdown('<a href="mailto:farfuraaa@gmail.com">Contact us !</a>', unsafe_allow_html=True)
+    # st.sidebar.markdown('<a href="mailto:farfuraaa@gmail.com">Contact us !</a>', unsafe_allow_html=True)
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     # contact_form = """
     # <form action="https://formsubmit.co/farfuraaa@gmail.com" method="POST">
