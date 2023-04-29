@@ -81,7 +81,7 @@ with st.container():
     #     st.image(img_lottie_animation)
     img = Image.open("img3.jpg")
     st.image(img)
-    img = Image.open("img4.jpg")
+    img = Image.open("img4.JPG")
     st.image(img)
     st.video("https://youtu.be/Rc8Ot_JZP0U")
     img = Image.open("img1.jpg")
