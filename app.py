@@ -79,7 +79,7 @@ with st.container():
     # image_column, text_column = st.columns((1, 2))
     # with image_column:
     #     st.image(img_lottie_animation)
-    img = Image.open("img3.jpg")
+    img = Image.open("img3.JPG")
     st.image(img)
     img = Image.open("img4.JPG")
     st.image(img)
