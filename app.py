@@ -61,7 +61,7 @@ with st.container():
         )
 
     with right_column:
-        img = Image.open("tree4 (2).png")
+        img = Image.open("tree.png")
         st.image(img)
 
     #     st_lottie(lottie_coding, height=300, key="coding")
