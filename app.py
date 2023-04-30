@@ -4,6 +4,7 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 
 
+
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 
@@ -27,7 +28,7 @@ local_css("style/style.css")
 # lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # img_contact_form = Image.open("images/yt_contact_form.png")
 # img_lottie_animation = Image.open("images/yt_lottie_animation.png")
-#
+
 # ---- HEADER SECTION ----
 with st.container():
     with st.container():
@@ -37,7 +38,7 @@ with st.container():
             st.subheader("bring back a litlebit of nature")
             st.title("organic designer")
             st.write(
-                "I love to build fernutures ,ecosystems and all that is between them."
+                "I love to build furniture ,ecosystems and all that is between them."
             )
         with right_column:
             img = Image.open("tree1.png")
@@ -61,7 +62,7 @@ with st.container():
         )
 
     with right_column:
-        img = Image.open("tree3.png")
+        img = Image.open("tree5.png")
         st.image(img)
 
     #     st_lottie(lottie_coding, height=300, key="coding")
@@ -69,7 +70,10 @@ with st.container():
 # ---- PROJECTS ----
 
 with st.container():
-
+    st.write("---")
+    st.header("Get In Touch With Me")
+    st.write("##")
+    st.write(" my email: farfuraaa@gmail.com")
     # with right_column:
     #     img = Image.open("tree.png")
     #     st.image(img)
@@ -84,11 +88,24 @@ with st.container():
     img = Image.open("img4.JPG")
     st.image(img)
     st.video("https://youtu.be/Rc8Ot_JZP0U")
+    st.video("https://youtu.be/nG71y2pjGNg")
     img = Image.open("img1.jpg")
     st.image(img)
     img = Image.open("img2.jpg")
     st.image(img)
     st.video("https://youtu.be/yd47jjJwuYY")
+    for i in range(44):
+        try:
+            img = Image.open(f"n ({i}).JPG")
+            st.image(img)
+        except:
+            try:
+                img = Image.open(f"n ({i}).jpg")
+                st.image(img)
+            except:
+                pass
+
+
 
 
 #     with text_column:
@@ -116,11 +133,7 @@ with st.container():
 # #         st.markdown("[Watch Video...](https://youtu.be/FOULV9Xij_8)")
 
 # ---- CONTACT ----
-with st.container():
-    st.write("---")
-    st.header("Get In Touch With Me")
-    st.write("##")
-    st.write(" my email: farfuraaa@gmail.com")
+
     # st.sidebar.markdown('<a href="mailto:farfuraaa@gmail.com">Contact us !</a>', unsafe_allow_html=True)
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     # contact_form = """
