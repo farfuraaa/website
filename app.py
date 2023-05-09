@@ -2,8 +2,23 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
+import os
+def folder_img_opener(path):
+    """
 
+    :param path:
+    :return: open the the imges in a folder and present them with a header
+    """
+    os.listdir()
+def anchorlink(n, title):
+    """
+    :param n: name of photo
+    :param title: what is the link name
+    :return:
+    """
 
+    if i == n:
+        st.header(f"{title}")
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
@@ -51,7 +66,7 @@ with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header("What I do")
+        # st.header("What I do")
         st.write("##")
         st.write(
             """
@@ -68,6 +83,7 @@ with st.container():
     #     st_lottie(lottie_coding, height=300, key="coding")
 
 # ---- PROJECTS ----
+# st.sidebar.success("Select a demo above.")
 
 with st.container():
     st.write("---")
@@ -80,6 +96,15 @@ with st.container():
     st.write("---")
     st.header("My Projects")
     st.write("##")
+    st.write("[tools](https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8)")
+    img = Image.open("n (30).JPG")
+    # st.image(img, width=200)
+    # mage = Image.open("n (30).JPG")
+
+    st.write("[furniture](https://photos.app.goo.gl/fuAaCVfaQq6TthMf9)")
+    st.write("[scolpturs @ landscape](https://photos.app.goo.gl/zG2we5Hc3HNSrojv6)")
+
+    # st.markdown("[plastic](#plastic)")
     # image_column, text_column = st.columns((1, 2))
     # with image_column:
     #     st.image(img_lottie_animation)
@@ -94,7 +119,11 @@ with st.container():
     img = Image.open("img2.jpg")
     st.image(img)
     st.video("https://youtu.be/yd47jjJwuYY")
-    for i in range(44):
+
+
+    # for loop that open all the jpg files that are name with (n)
+    for i in range(200):
+        anchorlink(33,"plastic")
         try:
             img = Image.open(f"n ({i}).JPG")
             st.image(img)
