@@ -2,9 +2,9 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
-import altair as alt
-# import os
-alt.renderers.enable('default')
+# import altair as alt
+# # import os
+# alt.renderers.enable('default')
 
 def folder_img_opener(path):
     """
