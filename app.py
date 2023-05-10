@@ -98,14 +98,14 @@ with st.container():
     #     st.image(img)
     st.write("---")
     st.header("My Projects")
-    # st.write("##")
-    # st.write("[tools](https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8)")
-    # img = Image.open("n (30).JPG")
-    # # st.image(img, width=200)
-    # # mage = Image.open("n (30).JPG")
-    #
-    # st.write("[furniture](https://photos.app.goo.gl/fuAaCVfaQq6TthMf9)")
-    # st.write("[scolpturs @ landscape](https://photos.app.goo.gl/zG2we5Hc3HNSrojv6)")
+    st.write("##")
+    st.write("[tools](https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8)")
+    img = Image.open("n (30).JPG")
+    # st.image(img, width=200)
+    # mage = Image.open("n (30).JPG")
+
+    st.write("[furniture](https://photos.app.goo.gl/fuAaCVfaQq6TthMf9)")
+    st.write("[scolpturs @ landscape](https://photos.app.goo.gl/zG2we5Hc3HNSrojv6)")
 
     # st.markdown("[plastic](#plastic)")
     # image_column, text_column = st.columns((1, 2))
