@@ -180,3 +180,4 @@ with st.container():
     # with right_column:
     #     st.empty()
 #
+# git add .    “git commit -m 'type any message here”    git push
