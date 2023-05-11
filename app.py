@@ -126,7 +126,7 @@ with st.container():
 
     # for loop that open all the jpg files that are name with (n)
     for i in range(200):
-        anchorlink(33,"plastic")
+        # anchorlink(33,"plastic")
         try:
             img = Image.open(f"n ({i}).JPG")
             st.image(img)
