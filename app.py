@@ -59,29 +59,29 @@ with st.container():
                 "I love to build furniture ,ecosystems and all that is between them."
             )
         with right_column:
-            img = Image.open("tree1.png")
+            img = Image.open("opening3.jpg")
             st.image(img)
 
     # st.write("[Learn More >](https://pythonandvba.com)")
 
 # ---- WHAT I DO ----
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        # st.header("What I do")
-        st.write("##")
-        st.write(
-            """
+# with st.container():
+#     st.write("---")
+#     left_column, right_column = st.columns(2)
+#     with left_column:
+#         # st.header("What I do")
+#         st.write("##")
+#         st.write(
+#             """
+#
+#
+#
+#               """
+#         )
 
-
-
-              """
-        )
-
-    with right_column:
-        img = Image.open("tree5.png")
-        st.image(img)
+    # with right_column:
+    #     img = Image.open("opening1.jpg")
+    #     st.image(img)
 
     #     st_lottie(lottie_coding, height=300, key="coding")
 
