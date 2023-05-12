@@ -6,10 +6,6 @@ import base64
 import streamlit as st
 from st_clickable_images import clickable_images
 import webbrowser
-from bokeh.models.widgets import Div
-
-
-
 
 
 
@@ -136,13 +132,8 @@ with st.container():
     )
 
     if clicked == 0:
-        # url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
-        # webbrowser.open_new_tab(url)
-        js = "window.open('https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8')"  # New tab or window
-        # js = "window.location.href = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'"  # Current tab
-        html = '<img src onerror="{}">'.format(js)
-        div = Div(text=html)
-        st.bokeh_chart(div)
+        url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
+        webbrowser.open_new_tab(url)
 
 
     if clicked == 1:
@@ -177,7 +168,7 @@ with st.container():
 
 
     # for loop that open all the jpg files that are name with (n)
-    for i in range(50):
+    for i in range(25):
         # anchorlink(33,"plastic")
         try:
             img = Image.open(f"n ({i}).JPG")
