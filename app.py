@@ -139,7 +139,7 @@ with st.container():
         # url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
         # webbrowser.open_new_tab(url)
         js = "window.open('https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8')"  # New tab or window
-        js = "window.location.href = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'"  # Current tab
+        # js = "window.location.href = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'"  # Current tab
         html = '<img src onerror="{}">'.format(js)
         div = Div(text=html)
         st.bokeh_chart(div)
