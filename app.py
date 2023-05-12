@@ -66,8 +66,9 @@ with st.container():
             st.write(
                 "I love to build furniture ,ecosystems and all that is between them."
             )
+            st.write(" my email: farfuraaa@gmail.com")
         with right_column:
-            img = Image.open("opening3.jpg")
+            img = Image.open("lily.jpg")
             st.image(img)
 
     # st.write("[Learn More >](https://pythonandvba.com)")
@@ -98,9 +99,51 @@ with st.container():
 
 with st.container():
     st.write("---")
-    st.header("Get In Touch With Me")
-    st.write("##")
-    st.write(" my email: farfuraaa@gmail.com")
+    # st.header("Get In Touch With Me")
+    # st.write("##")
+
+    import streamlit as st
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.animation import FuncAnimation
+    from matplotlib.colors import LinearSegmentedColormap
+    import random
+
+
+    # Define the color gradient from brownish green to straw
+    colors = [(random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()),(random.random(), random.random(), random.random())]
+    cmap_name = 'my_gradient'
+    cm = LinearSegmentedColormap.from_list(cmap_name, colors)
+
+    # Create a 2D array of values from 0 to 1
+    x = np.linspace(0, 1, 5)
+    y = np.linspace(0, 0.05, 6)
+    xx, yy = np.meshgrid(x, y)
+    z = np.random.rand(*xx.shape)
+
+
+    # Create a function that updates the plot with a new color gradient
+    def update(frame):
+        new_colors = [
+            (0.2 + 0.3 * np.sin(frame * 1.1), 0.4 + 0.3 * np.sin(frame * 1.3), 0.1 + 0.3 * np.sin(frame * 1.5)),
+            (0.3 + 0.2 * np.sin(frame * 0.7), 0.5 + 0.2 * np.sin(frame * 1.2), 0.2 + 0.2 * np.sin(frame * 1.9)),
+            (0.5 + 0.2 * np.sin(frame * 0.1), 0.7 + 0.2 * np.sin(frame * 1.1), 0.4 + 0.2 * np.sin(frame * 1.7)),
+            (1, 1, 0.4)]
+        new_cm = LinearSegmentedColormap.from_list(cmap_name, new_colors)
+        im.set_cmap(new_cm)
+        im.set_alpha(0.1 + 0.4 * np.sin(frame * 2))
+
+
+    # Create the plot with the initial color gradient and texture
+    fig, ax = plt.subplots()
+    im = ax.imshow(z, cmap=cm, aspect='auto', extent=[0, 1, 0, 0.025], origin='lower', interpolation='bicubic')
+    ax.set_axis_off()
+
+    # Animate the plot with the color gradient changing over time
+    ani = FuncAnimation(fig, update, frames=np.linspace(0, 5, 1), interval=30000)
+
+    # Display the animated plot in Streamlit
+    st.pyplot(fig, bbox_inches='tight', pad_inches=0)
     # with right_column:
     #     img = Image.open("tree.png")
     #     st.image(img)
