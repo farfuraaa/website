@@ -2,6 +2,13 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
+import base64
+import streamlit as st
+from st_clickable_images import clickable_images
+import webbrowser
+
+
+
 # import altair as alt
 # # import os
 # alt.renderers.enable('default')
@@ -24,7 +31,7 @@ from PIL import Image
 #         st.header(f"{title}")
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
+# st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 
 
 def load_lottieurl(url):
@@ -99,14 +106,49 @@ with st.container():
     st.write("---")
     st.header("My Projects")
     st.write("##")
-    st.write("[tools](https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8)")
-    img = Image.open("n (30).JPG")
-    # st.image(img, width=200)
-    # mage = Image.open("n (30).JPG")
+    # st.write("[tools](https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8)")
+    # # img = Image.open("n (30).JPG")
+    # # st.image(img, width=200)
+    # # mage = Image.open("n (30).JPG")
+    #
+    # st.write("[furniture](https://photos.app.goo.gl/fuAaCVfaQq6TthMf9)")
+    # st.write("[scolpturs @ landscape](https://photos.app.goo.gl/zG2we5Hc3HNSrojv6)")
 
-    st.write("[furniture](https://photos.app.goo.gl/fuAaCVfaQq6TthMf9)")
-    st.write("[scolpturs @ landscape](https://photos.app.goo.gl/zG2we5Hc3HNSrojv6)")
 
+
+
+    images = []
+    for file in ["tools.png", "fur.png", "landscape.png"]:
+        with open(file, "rb") as image:
+            encoded = base64.b64encode(image.read()).decode()
+            images.append(f"data:image/jpeg;base64,{encoded}")
+
+    clicked = clickable_images(
+        images,
+        titles=[f"Image #{str(i)}" for i in range(len(images))],
+        div_style={"display": "flex", "justify-content": "center", "flex-wrap": "wrap"},
+        img_style={"margin": "5px", "height": "200px"},
+    )
+
+    if clicked == 0:
+        url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
+        webbrowser.open_new_tab(url)
+
+
+    if clicked == 1:
+        url = 'https://photos.app.goo.gl/fuAaCVfaQq6TthMf9'
+        webbrowser.open_new_tab(url)
+
+
+
+    if clicked == 2:
+        url = 'https://photos.app.goo.gl/zG2we5Hc3HNSrojv6'
+        webbrowser.open_new_tab(url)
+
+
+
+
+    # st.markdown(f"Image #{clicked} clicked" if clicked > -1 else "No image clicked")
     # st.markdown("[plastic](#plastic)")
     # image_column, text_column = st.columns((1, 2))
     # with image_column:
@@ -125,7 +167,7 @@ with st.container():
 
 
     # for loop that open all the jpg files that are name with (n)
-    for i in range(200):
+    for i in range(50):
         # anchorlink(33,"plastic")
         try:
             img = Image.open(f"n ({i}).JPG")
