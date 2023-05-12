@@ -132,8 +132,10 @@ with st.container():
     )
 
     if clicked == 0:
-        url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
-        webbrowser.open_new_tab(url)
+        link = f'["{clicked}"](http://github.com)'
+        st.markdown(link, unsafe_allow_html=True)
+        # url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
+        # webbrowser.open_new_tab(url)
 
 
     if clicked == 1:
