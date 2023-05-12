@@ -132,10 +132,10 @@ with st.container():
     )
 
     if clicked == 0:
-        link = f'["{clicked}"](http://github.com)'
-        st.markdown(link, unsafe_allow_html=True)
-        # url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
-        # webbrowser.open_new_tab(url)
+
+        url = 'https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8'
+        webbrowser.open_new_tab(url)
+
 
 
     if clicked == 1:
@@ -148,9 +148,11 @@ with st.container():
         url = 'https://photos.app.goo.gl/zG2we5Hc3HNSrojv6'
         webbrowser.open_new_tab(url)
 
-
-
-
+    st.markdown("""
+    <a href="https://www.example.com">
+        <img src="path/to/fur.png" alt="Description of the image">
+    </a>
+    """, unsafe_allow_html=True)
     # st.markdown(f"Image #{clicked} clicked" if clicked > -1 else "No image clicked")
     # st.markdown("[plastic](#plastic)")
     # image_column, text_column = st.columns((1, 2))
