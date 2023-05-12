@@ -148,11 +148,16 @@ with st.container():
         url = 'https://photos.app.goo.gl/zG2we5Hc3HNSrojv6'
         webbrowser.open_new_tab(url)
 
-    st.markdown("""
-    <a href="https://photos.app.goo.gl/zG2we5Hc3HNSrojv6">
-        <img src="fur.png" alt="Description of the image">
-    </a>
-    """, unsafe_allow_html=True)
+    url = "https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"
+    image_path = "landscape.png"
+
+    link = f'<a href="{url}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open(image_path, "rb").read()).decode()}" alt="Description of the image"></a>'
+
+    st.markdown(link, unsafe_allow_html=True)
+
+    # Display the image
+    # image = Image.open(image_url)
+    # st.image(image, caption='Description of the image', use_column_width=True)
     # st.markdown(f"Image #{clicked} clicked" if clicked > -1 else "No image clicked")
     # st.markdown("[plastic](#plastic)")
     # image_column, text_column = st.columns((1, 2))
