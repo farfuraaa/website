@@ -5,3 +5,5 @@ streamlit==1.22.0
 
 streamlit_lottie==0.0.3
 altair==4.0
+st_clickable_images==1.0.0
+webbrowser==2.0.0
