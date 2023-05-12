@@ -149,8 +149,8 @@ with st.container():
         webbrowser.open_new_tab(url)
 
     st.markdown("""
-    <a href="https://www.example.com">
-        <img src="path/to/fur.png" alt="Description of the image">
+    <a href="https://photos.app.goo.gl/zG2we5Hc3HNSrojv6">
+        <img src="fur.png" alt="Description of the image">
     </a>
     """, unsafe_allow_html=True)
     # st.markdown(f"Image #{clicked} clicked" if clicked > -1 else "No image clicked")
