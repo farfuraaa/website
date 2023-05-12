@@ -1,9 +1,10 @@
 Pillow==8.4.0
-
+Pillow==9.5.0
+Pillow==9.5.0
 Requests==2.30.0
+st_clickable_images==0.0.3
 streamlit==1.22.0
-
+streamlit==1.21.0
+streamlit_lottie==0.0.2
 streamlit_lottie==0.0.3
 altair==4.0
-st_clickable_images==1.0.0
-webbrowser==2.0.0
