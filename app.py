@@ -155,6 +155,30 @@ with st.container():
 
     st.markdown(link, unsafe_allow_html=True)
 
+
+
+    urls = [
+        "https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8",
+        "https://photos.app.goo.gl/fuAaCVfaQq6TthMf9",
+        "https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"
+    ]
+
+    image_paths = [
+        "tools.png",
+        "fur.png",
+        "landscape.png"
+    ]
+
+    col1, col2, col3 = st.columns(3)
+
+    for url, path, col in zip(urls, image_paths, [col1, col2, col3]):
+        with col:
+            link = f'<a href="{url}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open(path, "rb").read()).decode()}" alt="Description of the image"></a>'
+            st.markdown(link, unsafe_allow_html=True)
+
+
+
+
     # Display the image
     # image = Image.open(image_url)
     # st.image(image, caption='Description of the image', use_column_width=True)
