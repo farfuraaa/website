@@ -123,23 +123,7 @@ with st.container():
 
 
 
-        # Define the file path of the MP3 file
-        audio_file_path = f"{random.randint(1,5)}.mp3"
 
-        # Read the audio file as binary data
-        with open(audio_file_path, "rb") as f:
-            audio_data = f.read()
-
-        # Encode the audio data in base64 format
-        audio_base64 = base64.b64encode(audio_data).decode()
-
-        # Generate a unique identifier for the HTML audio tag
-        unique_id = int(time.time())
-
-        # Define the updated HTML audio tag with the new unique identifier
-        audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay id="{unique_id}"></audio>'
-        # Display the updated HTML audio tag using Streamlit's `write` method
-        st.write(audio_html, unsafe_allow_html=True)
         # # Read the audio file as binary data
         # with open(audio_file_path, "rb") as f:
         #     audio_data = f.read()
@@ -188,6 +172,24 @@ with st.container():
         # Display the animated plot in Streamlit
 
         st.pyplot(fig, bbox_inches='tight', pad_inches=0)
+
+        # Define the file path of the MP3 file
+        audio_file_path = f"{random.randint(1, 5)}.mp3"
+
+        # Read the audio file as binary data
+        with open(audio_file_path, "rb") as f:
+            audio_data = f.read()
+
+        # Encode the audio data in base64 format
+        audio_base64 = base64.b64encode(audio_data).decode()
+
+        # Generate a unique identifier for the HTML audio tag
+        unique_id = int(time.time())
+
+        # Define the updated HTML audio tag with the new unique identifier
+        audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay id="{unique_id}"></audio>'
+        # Display the updated HTML audio tag using Streamlit's `write` method
+        st.write(audio_html, unsafe_allow_html=True)
 
 
     # Hide the Streamlit menu and footer
