@@ -248,17 +248,18 @@ with st.container():
 
 
     # for loop that open all the jpg files that are name with (n)
-    for i in range(25):
-        # anchorlink(33,"plastic")
-        try:
-            img = Image.open(f"n ({i}).JPG")
-            st.image(img)
-        except:
+    if st.button("load more"):
+        for i in range(25):
+            # anchorlink(33,"plastic")
             try:
-                img = Image.open(f"n ({i}).jpg")
+                img = Image.open(f"n ({i}).JPG")
                 st.image(img)
             except:
-                pass
+                try:
+                    img = Image.open(f"n ({i}).jpg")
+                    st.image(img)
+                except:
+                    pass
 
 
 
@@ -307,3 +308,5 @@ with st.container():
     #     st.empty()
 #
 # git add .    “git commit -m 'type any message here”    git push
+st.write("[thanks for Sven for the base line website code exmpple](https://www.youtube.com/@CodingIsFun) ")
+st.write("and thanks for gtp for code consultation")
