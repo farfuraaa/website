@@ -308,5 +308,7 @@ with st.container():
     #     st.empty()
 #
 # git add .    “git commit -m 'type any message here”    git push
+st.write("---")
+st.write("##")
 st.write("[thanks for Sven for the base line website code exmpple](https://www.youtube.com/@CodingIsFun) ")
 st.write("and thanks for gtp for code consultation")
