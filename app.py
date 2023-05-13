@@ -12,6 +12,16 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from matplotlib.colors import LinearSegmentedColormap
 import random
+# from streamlit_player import st_player
+# from IPython.display import Audio
+import time
+
+# n_sounds = 6
+# # Define the audio file path
+# audio_file = open(f"{random.randint(0,n_sounds)}.mp3", "rb").read()
+#
+# # Play the audio file using the st_player function
+# st_player(audio_file)
 
 
 
@@ -109,8 +119,39 @@ with st.container():
     # st.write("##")
 
 
-
     if st.button("generate random colors with code I made"):
+
+
+
+        # Define the file path of the MP3 file
+        audio_file_path = f"{random.randint(1,5)}.mp3"
+
+        # Read the audio file as binary data
+        with open(audio_file_path, "rb") as f:
+            audio_data = f.read()
+
+        # Encode the audio data in base64 format
+        audio_base64 = base64.b64encode(audio_data).decode()
+
+        # Generate a unique identifier for the HTML audio tag
+        unique_id = int(time.time())
+
+        # Define the updated HTML audio tag with the new unique identifier
+        audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay id="{unique_id}"></audio>'
+        # Display the updated HTML audio tag using Streamlit's `write` method
+        st.write(audio_html, unsafe_allow_html=True)
+        # # Read the audio file as binary data
+        # with open(audio_file_path, "rb") as f:
+        #     audio_data = f.read()
+        #
+        # # Encode the audio data in base64 format
+        # audio_base64 = base64.b64encode(audio_data).decode()
+        #
+        # # Define the HTML audio tag with the base64-encoded audio data
+        # audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay></audio>'
+        #
+        # # Display the audio file using Streamlit's `write` method
+        # st.write(audio_html, unsafe_allow_html=True)
 
         # Define the color gradient from brownish green to straw
         colors = [(random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()),(random.random(), random.random(), random.random())]
@@ -148,6 +189,15 @@ with st.container():
 
         st.pyplot(fig, bbox_inches='tight', pad_inches=0)
 
+
+    # Hide the Streamlit menu and footer
+    hide_menu_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+        """
+    st.markdown(hide_menu_style, unsafe_allow_html=True)
     # with right_column:
     #     img = Image.open("tree.png")
     #     st.image(img)
@@ -248,15 +298,26 @@ with st.container():
 
 
     # for loop that open all the jpg files that are name with (n)
+    n_photos = 50
     if st.button("load more"):
-        for i in range(25):
+        n = []
+        for j in range(n_photos):
+            i = random.randint(0, n_photos)
+
+            for m in range(len(n)):
+                if n[m] == i:
+                    i = random.randint(0, n_photos)
+
+            n.append(i)
+        print(n)
+        for i in range(n_photos):
             # anchorlink(33,"plastic")
             try:
-                img = Image.open(f"n ({i}).JPG")
+                img = Image.open(f"n ({n[i]}).JPG")
                 st.image(img)
             except:
                 try:
-                    img = Image.open(f"n ({i}).jpg")
+                    img = Image.open(f"n ({n[i]}).jpg")
                     st.image(img)
                 except:
                     pass
