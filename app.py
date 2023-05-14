@@ -195,7 +195,7 @@ with st.container():
             st.write(audio_html, unsafe_allow_html=True)
             T = 0.7
             time.sleep(T)
-            st.pyplot(clear_figure=True)
+            # st.pyplot(clear_figure=True)
 
     if st.button("Generate random colors with code I made"):
 
