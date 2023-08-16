@@ -82,7 +82,7 @@ with st.container():
             st.write(
                 "I love to build furniture ,ecosystems and everything that is between."
             )
-            st.write(" my email: farfuraaa@gmail.com")
+            st.write(" my email: arumdioscoridis@gmail.com")
         with right_column:
             img = Image.open("lily.jpg")
             st.image(img)
