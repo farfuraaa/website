@@ -80,7 +80,7 @@ with st.container():
             st.subheader("Bring back a litlebit of nature")
             st.title("organic designer")
             st.write(
-                "I love to build furniture ,ecosystems and everything that is between."
+                "I love to make music, furniture, ecosystems and everything in between."
             )
             st.write(" my email: arumdioscoridis@gmail.com")
         with right_column:
@@ -120,84 +120,84 @@ with st.container():
     if st.button("stop"):
         play = 0
 
-    if st.button("play"):
+    # if st.button("play"):
 
 
 
 
-            # # Read the audio file as binary data
-            # with open(audio_file_path, "rb") as f:
-            #     audio_data = f.read()
-            #
-            # # Encode the audio data in base64 format
-            # audio_base64 = base64.b64encode(audio_data).decode()
-            #
-            # # Define the HTML audio tag with the base64-encoded audio data
-            # audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay></audio>'
-            #
-            # # Display the audio file using Streamlit's `write` method
-            # st.write(audio_html, unsafe_allow_html=True)
+    #         # # Read the audio file as binary data
+    #         # with open(audio_file_path, "rb") as f:
+    #         #     audio_data = f.read()
+    #         #
+    #         # # Encode the audio data in base64 format
+    #         # audio_base64 = base64.b64encode(audio_data).decode()
+    #         #
+    #         # # Define the HTML audio tag with the base64-encoded audio data
+    #         # audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay></audio>'
+    #         #
+    #         # # Display the audio file using Streamlit's `write` method
+    #         # st.write(audio_html, unsafe_allow_html=True)
 
-            # Define the color gradient from brownish green to straw
-        play = 1
-        while play == 1:
-            colors = [(random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()),(random.random(), random.random(), random.random())]
-            cmap_name = 'my_gradient'
-            cm = LinearSegmentedColormap.from_list(cmap_name, colors)
+    #         # Define the color gradient from brownish green to straw
+    #     play = 1
+    #     while play == 1:
+    #         colors = [(random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()), (random.random(), random.random(), random.random()),(random.random(), random.random(), random.random())]
+    #         cmap_name = 'my_gradient'
+    #         cm = LinearSegmentedColormap.from_list(cmap_name, colors)
 
-            # Create a 2D array of values from 0 to 1
-            x = np.linspace(0, 1, 5)
-            y = np.linspace(0, 0.05, 6)
-            xx, yy = np.meshgrid(x, y)
-            z = np.random.rand(*xx.shape)
-
-
-            # Create a function that updates the plot with a new color gradient
-            def update(frame):
-                new_colors = [
-                    (0.2 + 0.3 * np.sin(frame * 1.1), 0.4 + 0.3 * np.sin(frame * 1.3), 0.1 + 0.3 * np.sin(frame * 1.5)),
-                    (0.3 + 0.2 * np.sin(frame * 0.7), 0.5 + 0.2 * np.sin(frame * 1.2), 0.2 + 0.2 * np.sin(frame * 1.9)),
-                    (0.5 + 0.2 * np.sin(frame * 0.1), 0.7 + 0.2 * np.sin(frame * 1.1), 0.4 + 0.2 * np.sin(frame * 1.7)),
-                    (1, 1, 0.4)]
-                new_cm = LinearSegmentedColormap.from_list(cmap_name, new_colors)
-                im.set_cmap(new_cm)
-                im.set_alpha(0.1 + 0.4 * np.sin(frame * 2))
+    #         # Create a 2D array of values from 0 to 1
+    #         x = np.linspace(0, 1, 5)
+    #         y = np.linspace(0, 0.05, 6)
+    #         xx, yy = np.meshgrid(x, y)
+    #         z = np.random.rand(*xx.shape)
 
 
-            # Create the plot with the initial color gradient and texture
-            fig, ax = plt.subplots()
-            im = ax.imshow(z, cmap=cm, aspect='auto', extent=[0, 1, 0, 0.025], origin='lower', interpolation='bicubic')
-            ax.set_axis_off()
+    #         # Create a function that updates the plot with a new color gradient
+    #         def update(frame):
+    #             new_colors = [
+    #                 (0.2 + 0.3 * np.sin(frame * 1.1), 0.4 + 0.3 * np.sin(frame * 1.3), 0.1 + 0.3 * np.sin(frame * 1.5)),
+    #                 (0.3 + 0.2 * np.sin(frame * 0.7), 0.5 + 0.2 * np.sin(frame * 1.2), 0.2 + 0.2 * np.sin(frame * 1.9)),
+    #                 (0.5 + 0.2 * np.sin(frame * 0.1), 0.7 + 0.2 * np.sin(frame * 1.1), 0.4 + 0.2 * np.sin(frame * 1.7)),
+    #                 (1, 1, 0.4)]
+    #             new_cm = LinearSegmentedColormap.from_list(cmap_name, new_colors)
+    #             im.set_cmap(new_cm)
+    #             im.set_alpha(0.1 + 0.4 * np.sin(frame * 2))
 
-            # Animate the plot with the color gradient changing over time
-            ani = FuncAnimation(fig, update, frames=np.linspace(0, 5, 1), interval=30000)
 
-            # Display the animated plot in Streamlit
+    #         # Create the plot with the initial color gradient and texture
+    #         fig, ax = plt.subplots()
+    #         im = ax.imshow(z, cmap=cm, aspect='auto', extent=[0, 1, 0, 0.025], origin='lower', interpolation='bicubic')
+    #         ax.set_axis_off()
 
-            st.pyplot(fig, bbox_inches='tight', pad_inches=0)
+    #         # Animate the plot with the color gradient changing over time
+    #         ani = FuncAnimation(fig, update, frames=np.linspace(0, 5, 1), interval=30000)
 
-            # Define the file path of the MP3 file
-            audio_file_path = f"{random.randint(1, 5)}.mp3"
+    #         # Display the animated plot in Streamlit
 
-            # Read the audio file as binary data
-            with open(audio_file_path, "rb") as f:
-                audio_data = f.read()
+    #         st.pyplot(fig, bbox_inches='tight', pad_inches=0)
 
-            # Encode the audio data in base64 format
-            audio_base64 = base64.b64encode(audio_data).decode()
+    #         # Define the file path of the MP3 file
+    #         audio_file_path = f"{random.randint(1, 5)}.mp3"
 
-            # Generate a unique identifier for the HTML audio tag
-            unique_id = int(time.time())
+    #         # Read the audio file as binary data
+    #         with open(audio_file_path, "rb") as f:
+    #             audio_data = f.read()
 
-            # Define the updated HTML audio tag with the new unique identifier
-            audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay id="{unique_id}"></audio>'
-            # Display the updated HTML audio tag using Streamlit's `write` method
-            st.write(audio_html, unsafe_allow_html=True)
-            T = 0.7
-            time.sleep(T)
-            # st.pyplot(clear_figure=True)
+    #         # Encode the audio data in base64 format
+    #         audio_base64 = base64.b64encode(audio_data).decode()
 
-    if st.button("Generate random colors with code I made"):
+    #         # Generate a unique identifier for the HTML audio tag
+    #         unique_id = int(time.time())
+
+    #         # Define the updated HTML audio tag with the new unique identifier
+    #         audio_html = f'<audio src="data:audio/mp3;base64,{audio_base64}" autoplay id="{unique_id}"></audio>'
+    #         # Display the updated HTML audio tag using Streamlit's `write` method
+    #         st.write(audio_html, unsafe_allow_html=True)
+    #         T = 0.7
+    #         time.sleep(T)
+    #         # st.pyplot(clear_figure=True)
+
+    if st.button("Generate random organic patterns with code I made"):
 
 
 
