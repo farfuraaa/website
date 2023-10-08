@@ -113,12 +113,12 @@ with st.container():
 # ---- PROJECTS ----
 # st.sidebar.success("Select a demo above.")
 
-with st.container():
-    st.write("---")
-    # st.header("Get In Touch With Me")
-    # st.write("##")
-    if st.button("stop"):
-        play = 0
+# with st.container():
+#     st.write("---")
+#     # st.header("Get In Touch With Me")
+#     # st.write("##")
+#     if st.button("stop"):
+#         play = 0
 
     # if st.button("play"):
 
