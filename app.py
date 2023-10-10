@@ -78,7 +78,7 @@ with st.container():
         left_column, right_column = st.columns(2)
         with left_column:
             st.subheader("Bring back a litlebit of nature")
-            st.title("organic designer")
+            st.title("organic solutions")
             st.write(
                 "I love to make music, furniture, ecosystems and everything in between."
             )
@@ -331,7 +331,7 @@ with st.container():
     # link = f'<a href="{url}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open(image_path, "rb").read()).decode()}" alt="Description of the image"></a>'
     #
     # st.markdown(link, unsafe_allow_html=True)
-    link = f'<a href="{"https://farfura.bandcamp.com/?from=viewsite_dashboard"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="500"></a>'
+    link = f'<a href="{"https://farfura.bandcamp.com/?from=viewsite_dashboard"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="600"></a>'
     st.markdown(link, unsafe_allow_html=True)
 
 
