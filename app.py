@@ -331,18 +331,19 @@ with st.container():
     # link = f'<a href="{url}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open(image_path, "rb").read()).decode()}" alt="Description of the image"></a>'
     #
     # st.markdown(link, unsafe_allow_html=True)
+    link = f'<a href="{"https://farfura.bandcamp.com/?from=viewsite_dashboard"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="222"></a>'
+    st.markdown(link, unsafe_allow_html=True)
 
 
 
     urls = [
-        "https://farfura.bandcamp.com/?from=viewsite_dashboard",
         "https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8",
         "https://photos.app.goo.gl/fuAaCVfaQq6TthMf9",
         "https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"
     ]
 
     image_paths = [
-        "sounds.jpg",
+        
         "tools.jpg",
         "fur.jpg",
         "landscape.jpg"
