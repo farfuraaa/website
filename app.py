@@ -352,24 +352,24 @@ with st.container():
 
 
 
-    urls = [
-        "https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8",
-        "https://photos.app.goo.gl/fuAaCVfaQq6TthMf9",
-        "https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"
-    ]
+    # urls = [
+    #     "https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8",
+    #     "https://photos.app.goo.gl/fuAaCVfaQq6TthMf9",
+    #     "https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"
+    # ]
 
-    image_paths = [      
-        "tools.jpg",
-        "fur.jpg",
-        "landscape.jpg"
-    ]
+    # image_paths = [      
+    #     "tools.jpg",
+    #     "fur.jpg",
+    #     "landscape.jpg"
+    # ]
 
-    col1, col2, col3 = st.columns(3)
+    # col1, col2, col3 = st.columns(3)
 
-    for url, path, col in zip(urls, image_paths, [col1, col2, col3]):
-        with col:
-            link = f'<a href="{url}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open(path, "rb").read()).decode()}" alt="Description of the image" width="222"></a>'
-            st.markdown(link, unsafe_allow_html=True)
+    # for url, path, col in zip(urls, image_paths, [col1, col2, col3]):
+    #     with col:
+    #         link = f'<a href="{url}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open(path, "rb").read()).decode()}" alt="Description of the image" width="222"></a>'
+    #         st.markdown(link, unsafe_allow_html=True)
 
 
 
