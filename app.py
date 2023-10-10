@@ -342,7 +342,7 @@ with st.container():
     ]
 
     image_paths = [
-        "sounds and music.jpg,
+        "sounds.jpg,
         "tools.jpg",
         "fur.jpg",
         "landscape.jpg"
