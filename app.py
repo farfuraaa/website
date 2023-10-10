@@ -333,20 +333,21 @@ with st.container():
     
     # st.markdown(link, unsafe_allow_html=True)
     with st.container():
-        with left_column: 
+        with st.container():
+            with left_column: 
+        
+                link = f'<a href="{"https://farfura.bandcamp.com/?from=viewsite_dashboard"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
+                st.markdown(link, unsafe_allow_html=True)
+            
+                link = f'<a href="{"https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("tools.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
+                st.markdown(link, unsafe_allow_html=True)
     
-            link = f'<a href="{"https://farfura.bandcamp.com/?from=viewsite_dashboard"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
-            st.markdown(link, unsafe_allow_html=True)
-        
-            link = f'<a href="{"https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("tools.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
-            st.markdown(link, unsafe_allow_html=True)
-
-        with right_column:
-            link = f'<a href="{"https://photos.app.goo.gl/fuAaCVfaQq6TthMf9"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("fur.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
-            st.markdown(link, unsafe_allow_html=True)
-        
-            link = f'<a href="{"https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("landscape.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
-            st.markdown(link, unsafe_allow_html=True)
+            with right_column:
+                link = f'<a href="{"https://photos.app.goo.gl/fuAaCVfaQq6TthMf9"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("fur.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
+                st.markdown(link, unsafe_allow_html=True)
+            
+                link = f'<a href="{"https://photos.app.goo.gl/zG2we5Hc3HNSrojv6"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("landscape.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
+                st.markdown(link, unsafe_allow_html=True)
 
 
 
