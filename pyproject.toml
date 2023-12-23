@@ -18,3 +18,7 @@ watchdog = "^2.1.8"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[theme]
+# primaryColor="#F63366"
+backgroundColor="#de5d83"
