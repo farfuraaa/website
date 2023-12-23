@@ -72,8 +72,9 @@ local_css("style/style.css")
 # img_lottie_animation = Image.open("images/yt_lottie_animation.png")
 
 # ---- HEADER SECTION ----
-[theme]
+# [theme]
 backgroundColor = "#de5d83"
+
 with st.container():
     with st.container():
         st.write("---")
