@@ -77,12 +77,12 @@ with st.container():
         st.write("---")
         left_column, right_column = st.columns(2)
         with left_column:
-            st.subheader("Bring back a litlebit of nature")
-            st.title("organic solutions")
+            # st.subheader("Bring back a litlebit of nature")
+            st.title("NC studio")
             st.write(
-                "I love to make music, furniture, ecosystems and everything in between."
+                "Composing @ Creating soundtracks, furnitures, ecosystems and everything in between."
             )
-            st.write(" my email: arumdioscoridis@gmail.com")
+            st.write("Contact me at: arumdioscoridis@gmail.com")
         with right_column:
             img = Image.open("lily.jpg")
             st.image(img)
