@@ -23,7 +23,22 @@ import time
 # # Play the audio file using the st_player function
 # st_player(audio_file)
 
-
+# Add a style block to the Streamlit app
+st.markdown(
+    """
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 # import altair as alt
