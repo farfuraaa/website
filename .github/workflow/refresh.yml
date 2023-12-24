@@ -1,0 +1,14 @@
+name: Daily Refresh
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Refresh Streamlit app
+      run: |
+        curl -X GET https://nadavcohen.streamlit.app
