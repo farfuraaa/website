@@ -397,7 +397,7 @@ with st.container():
 # with col1:
     st.image(Image.open("IMG_9456.JPG"))
 # with col2:
-    st.image(Image.open("IMG_9451.JPG"))
+    # st.image(Image.open("IMG_9451.JPG"))
     
     st.video("https://youtu.be/Rc8Ot_JZP0U")
     # st.video("https://drive.google.com/file/d/1DNs4V8QX5TwvT6iygTVlXxGrbqSmmdWx/view?usp=sharing")
