@@ -387,6 +387,7 @@ with st.container():
     #     st.image(img_lottie_animation)
     img = Image.open("img3.JPG")
     st.image(img)
+    st.image("https://photos.app.goo.gl/kpHaV3WSjbAGxSta8")
     img = Image.open("img4.JPG")
     st.image(img)
     st.video("https://youtu.be/Rc8Ot_JZP0U")
