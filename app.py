@@ -15,7 +15,7 @@ import random
 # from streamlit_player import st_player
 # from IPython.display import Audio
 import time
-from PIL import ImageOps
+from PIL import Image
 
 
 
@@ -395,9 +395,9 @@ with st.container():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image(Image.open(ImageOps.exif_transpose("IMG_9456.JPG")))
+        st.image(Image.open("IMG_9456.JPG"))
     with col2:
-        st.image(Image.open(ImageOps.exif_transpose("IMG_9451.JPG")))
+        st.image(Image.open("IMG_9451.JPG"))
         
     st.video("https://youtu.be/Rc8Ot_JZP0U")
     st.video("https://drive.google.com/file/d/1DNs4V8QX5TwvT6iygTVlXxGrbqSmmdWx/view?usp=sharing")
