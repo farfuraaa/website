@@ -387,7 +387,7 @@ with st.container():
     #     st.image(img_lottie_animation)
     img = Image.open("img3.JPG")
     st.image(img)
-    st.image("https://photos.app.goo.gl/kpHaV3WSjbAGxSta8")
+    st.image("https://photos.google.com/share/AF1QipNsfoku7WiD_kDamdjVwH8pOcgh7zXtaJwGtKohUACQETHhGc3W-KfDFkkKB-IVyA/photo/AF1QipMnkm8tmKmMlaIxdXhfbkQG5LRhutNX3zI9BasX?key=T0xRMUQ0LVFRMjJ2ek02eXk3dlc3ZzF6cnh5NFN3")
     img = Image.open("img4.JPG")
     st.image(img)
     st.video("https://youtu.be/Rc8Ot_JZP0U")
