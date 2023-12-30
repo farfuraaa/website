@@ -385,11 +385,14 @@ with st.container():
     # image_column, text_column = st.columns((1, 2))
     # with image_column:
     #     st.image(img_lottie_animation)
-    img = Image.open("img3.JPG")
-    st.image(img)
+    img = Image.open("IMG_9810.JPG")
+    st.image("IMG_9808.JPG")
     st.image("https://photos.google.com/share/AF1QipNsfoku7WiD_kDamdjVwH8pOcgh7zXtaJwGtKohUACQETHhGc3W-KfDFkkKB-IVyA/photo/AF1QipMnkm8tmKmMlaIxdXhfbkQG5LRhutNX3zI9BasX?key=T0xRMUQ0LVFRMjJ2ek02eXk3dlc3ZzF6cnh5NFN3")
-    img = Image.open("img4.JPG")
-    st.image(img)
+    with col1:
+        st.image("IMG_9456.JPG")
+    with col2:
+        st.image("IMG_9451.JPG")
+        
     st.video("https://youtu.be/Rc8Ot_JZP0U")
     st.video("https://drive.google.com/file/d/1DNs4V8QX5TwvT6iygTVlXxGrbqSmmdWx/view?usp=sharing")
     st.video("https://youtu.be/nG71y2pjGNg")
