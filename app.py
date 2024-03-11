@@ -342,7 +342,7 @@ with st.container():
       
     with col1: 
 
-        link = f'<a href="{"https://farfura.bandcamp.com/?from=viewsite_dashboard"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
+        link = f'<a href="{"https://soundcloud.com/nadav-cohen-5"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("sounds.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
         st.markdown(link, unsafe_allow_html=True)
     
         link = f'<a href="{"https://photos.app.goo.gl/ihT5Sty7Yx3NUsVL8"}" target="_blank"><img src="data:image/jpeg;base64,{base64.b64encode(open("tools.jpg", "rb").read()).decode()}" alt="Description of the image" width="350"></a>'
