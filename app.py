@@ -389,51 +389,57 @@ with st.container():
     # image_column, text_column = st.columns((1, 2))
     # with image_column:
     #     st.image(img_lottie_animation)
-   
-    st.image(Image.open("IMG_9810.JPG"))
-    st.image(Image.open("IMG_9808.JPG"))
-    # st.image("https://photos.google.com/share/AF1QipNsfoku7WiD_kDamdjVwH8pOcgh7zXtaJwGtKohUACQETHhGc3W-KfDFkkKB-IVyA/photo/AF1QipMnkm8tmKmMlaIxdXhfbkQG5LRhutNX3zI9BasX?key=T0xRMUQ0LVFRMjJ2ek02eXk3dlc3ZzF6cnh5NFN3")
 
-# col1, col2 = st.columns(2)
-# with col1:
-    st.image(Image.open("IMG_9456.JPG"))
-# with col2:
-    # st.image(Image.open("IMG_9451.JPG"))
+
+
+
+
+
+
+#     st.image(Image.open("IMG_9810.JPG"))
+#     st.image(Image.open("IMG_9808.JPG"))
+#     # st.image("https://photos.google.com/share/AF1QipNsfoku7WiD_kDamdjVwH8pOcgh7zXtaJwGtKohUACQETHhGc3W-KfDFkkKB-IVyA/photo/AF1QipMnkm8tmKmMlaIxdXhfbkQG5LRhutNX3zI9BasX?key=T0xRMUQ0LVFRMjJ2ek02eXk3dlc3ZzF6cnh5NFN3")
+
+# # col1, col2 = st.columns(2)
+# # with col1:
+#     st.image(Image.open("IMG_9456.JPG"))
+# # with col2:
+#     # st.image(Image.open("IMG_9451.JPG"))
     
-    st.video("https://youtu.be/Rc8Ot_JZP0U")
-    # st.video("https://drive.google.com/file/d/1DNs4V8QX5TwvT6iygTVlXxGrbqSmmdWx/view?usp=sharing")
-    st.video("https://youtu.be/nG71y2pjGNg")
-    img = Image.open("img1.jpg")
-    st.image(img)
-    img = Image.open("img2.jpg")
-    st.image(img)
-    st.video("https://youtu.be/yd47jjJwuYY")
+#     st.video("https://youtu.be/Rc8Ot_JZP0U")
+#     # st.video("https://drive.google.com/file/d/1DNs4V8QX5TwvT6iygTVlXxGrbqSmmdWx/view?usp=sharing")
+#     st.video("https://youtu.be/nG71y2pjGNg")
+#     img = Image.open("img1.jpg")
+#     st.image(img)
+#     img = Image.open("img2.jpg")
+#     st.image(img)
+#     st.video("https://youtu.be/yd47jjJwuYY")
 
 
-    # for loop that open all the jpg files that are name with (n)
-    n_photos = 50
-    if st.button("load more"):
-        n = []
-        for j in range(n_photos):
-            i = random.randint(0, n_photos)
+#     # for loop that open all the jpg files that are name with (n)
+#     n_photos = 50
+#     if st.button("load more"):
+#         n = []
+#         for j in range(n_photos):
+#             i = random.randint(0, n_photos)
 
-            for m in range(len(n)):
-                if n[m] == i:
-                    i = random.randint(0, n_photos)
+#             for m in range(len(n)):
+#                 if n[m] == i:
+#                     i = random.randint(0, n_photos)
 
-            n.append(i)
-        print(n)
-        for i in range(n_photos):
-            # anchorlink(33,"plastic")
-            try:
-                img = Image.open(f"n ({n[i]}).JPG")
-                st.image(img)
-            except:
-                try:
-                    img = Image.open(f"n ({n[i]}).jpg")
-                    st.image(img)
-                except:
-                    pass
+#             n.append(i)
+#         print(n)
+#         for i in range(n_photos):
+#             # anchorlink(33,"plastic")
+#             try:
+#                 img = Image.open(f"n ({n[i]}).JPG")
+#                 st.image(img)
+#             except:
+#                 try:
+#                     img = Image.open(f"n ({n[i]}).jpg")
+#                     st.image(img)
+#                 except:
+#                     pass
 
 
 
